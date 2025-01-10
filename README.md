@@ -71,9 +71,9 @@ Success: Sent 37KB code to 'reversed-area'
 micrcx@micrcx-desktop:~/toit/threaded_code$
 
 ```
->>
->>Monitor
->>
+
+>Trace on monitor
+
 ```
 [jaguar] INFO: program 962d55d5-99fe-8425-a7a7-791a4892b2bd started
 OFF
