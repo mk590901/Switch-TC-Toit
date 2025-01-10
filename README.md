@@ -8,5 +8,90 @@ The editor's __Planner__ module was supplemented with __toit__ code generator, w
 
 The generated __switch_reset_helper.toit__ file is a skeleton for the logical part of the application, namely the list and bodies of empty transfer functions that can and should be filled with some content. For example, with trace elements in the simplest case. Some functions may not be used and should be deleted or commented out:
 
+>switch_reset_helper.toit
+
+## Additional modules
+
+To test the threaded code for hierarchical state machine, need to manually create small module that ensure the launch of the application:
+
+>test_switch.toit
+
+## Description of the application
+
+There are several methods can use to run the application:
+
+>Launch as a console application, using the __toit execute__ command:
+
+```
+
+michael-k@michaelk-Inspiron-14-5420:~/toit_apps/threaded_code$ toit execute switch_test.toit
+OFF
+OFF: TURN
+ON
+@RESET
+OFF
+OFF: TURN
+ON
+ON : TURN
+OFF
+@RESET
+OFF
+michael-k@michaelk-Inspiron-14-5420:~/toit_apps/threaded_code$
+
+```
+
+>On an ESP32 chip named mini, using __toit run__ command:
+
+```
+
+michael-k@michaelk-Inspiron-14-5420:~/toit_apps/threaded_code$ toit run -d=mini switch_test.toit
+2025-01-09T12:40:24.418020Z: <process initiated>
+OFF
+OFF: TURN
+ON
+@RESET
+OFF
+OFF: TURN
+ON
+ON : TURN
+OFF
+@RESET
+OFF
+2025-01-09T12:40:24.893627Z: <process terminated - exit code: 0>
+michael-k@michaelk-Inspiron-14-5420:~/toit_apps/threaded_code$
+
+```
+
+>On an advanced ESP32-S3 chip, using __Jaguar__ command:
+
+```
+micrcx@micrcx-desktop:~/toit/threaded_code$ jag run switch_test.toit
+Running 'switch_test.toit' on 'reversed-area' ...
+Success: Sent 37KB code to 'reversed-area'
+micrcx@micrcx-desktop:~/toit/threaded_code$
+
+```
+>>
+>>Monitor
+>>
+```
+[jaguar] INFO: program 962d55d5-99fe-8425-a7a7-791a4892b2bd started
+OFF
+OFF: TURN
+ON
+@RESET
+OFF
+OFF: TURN
+ON
+ON : TURN
+OFF
+@RESET
+OFF
+[jaguar] INFO: program 962d55d5-99fe-8425-a7a7-791a4892b2bd stopped
+
+```
+
+
+
 
 
