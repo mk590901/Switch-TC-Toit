@@ -67,7 +67,6 @@ class Switch_resetComposer :
     if key == "off.RESET" :
       list.add :: | p | off_reset p
       list.add :: | p | off_entry p
-      //print "compose off.RESET [$list.size]"
       return list
 
     if key == "off.TURN" :
