@@ -63,6 +63,9 @@ michael-k@michaelk-Inspiron-14-5420:~/toit_apps/threaded_code$
 ```
 
 >On an advanced ESP32-S3 chip, using __Jaguar__ command:
+>
+![PXL_20250109_123242772 MP](https://github.com/user-attachments/assets/c8e510a3-3915-4d44-947a-7e132802dd2d)
+
 
 ```
 micrcx@micrcx-desktop:~/toit/threaded_code$ jag run switch_test.toit
