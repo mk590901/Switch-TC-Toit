@@ -12,6 +12,8 @@ The generated __switch_reset_helper.toit__ file is a skeleton for the logical pa
 
 ```toit
 
+//	Classes Switch_resetHelper & Switch_resetComposer automatically generated at 2025-01-12 08:22:38
+
 import .tc_core show *
 
 //////////////////////////////////////////////////
@@ -46,17 +48,25 @@ class Switch_resetHelper :
 //////////////////////////////////////////////////          
 class Switch_resetComposer : 
 
+  // switch_entry data/any -> none :
+
+  // switch_init data/any -> none :
+   
   off_entry data/any -> none :
     print "OFF"
 
   off_reset data/any -> none :
     print "@RESET"
 
+  // off_exit data/any -> none :
+
   off_turn data/any -> none :
     print "OFF: TURN"
 
   on_entry data/any -> none :
     print "ON"
+
+  // on_exit data/any -> none :
 
   on_turn data/any -> none :
     print "ON : TURN"
@@ -66,6 +76,8 @@ class Switch_resetComposer :
     
     if key == "off.RESET" :
       list.add :: | p | off_reset p
+      // list.add :: | p | off_exit p
+      // list.add :: | p | switch_init p
       list.add :: | p | off_entry p
       return list
 
@@ -76,15 +88,23 @@ class Switch_resetComposer :
 
     if key == "on.TURN" :
       list.add :: | p | on_turn p
+      // list.add :: | p | on_exit p
+      // list.add :: | p | off_exit p
+      // list.add :: | p | switch_init p
       list.add :: | p | off_entry p
       return list
 
     if key == "switch.init" :
+      // list.add :: | p | switch_init p
+      // list.add :: | p | switch_entry p
       list.add :: | p | off_entry p
       return list;
 
     if key == "on.RESET" :
       list.add :: | p | off_reset p
+      // list.add :: | p | on_exit p
+      // list.add :: | p | off_exit p
+      // list.add :: | p | switch_init p
       list.add :: | p | off_entry p
       return list
   
