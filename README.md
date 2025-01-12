@@ -158,7 +158,7 @@ michael-k@michaelk-Inspiron-14-5420:~/toit_apps/threaded_code$
 
 ```
 
->On an ESP32 chip named mini, using __toit run__ command:
+>On an ESP32 chip named __mini__, using __toit run__ command:
 
 ![PXL_20250110_102511520 PORTRAIT](https://github.com/user-attachments/assets/e3b7cd0f-675c-4948-85c0-721c1ff7a681)
 
